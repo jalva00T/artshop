@@ -18,7 +18,7 @@ class CustomLoginRequiredMixin():
 
         token = request.headers['Authorization']
         now = datetime.datetime.now()
-        login_user = User.objects.filter(token=token, token_expires_at_gt=now)
+        login_user = User.objects.filter(token=token, token_expires_at__gt=now)
         if len(login_user) == 0:
             response = Response({'error': 'The token is invalid or expired.'}, status=status.HTTP_404_NOT_FOUND)
             response.accepted_renderer = JSONRenderer()
