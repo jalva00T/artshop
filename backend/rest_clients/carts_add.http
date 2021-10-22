@@ -2,7 +2,7 @@
 # To send the request and get the result, click the 'Send Request' 
 POST http://127.0.0.1:8000/cart/add/ HTTP/1.1
 content-type: application/json
-Authorization: 2020dffd807886987c717bb353b7e36ff09f2fc6da39812742cb8028b4ff
+Authorization: 01a05e215e686130d7cd27952440eda9a57a0205e70e07c698ba321171b3
 
 {
 	"quantity": 1,
