@@ -11,6 +11,7 @@ import { push } from "connected-react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../reducks/user/selectors";
 import { getItems } from "../reducks/items/selectors";
+import { getSubtotal } from "../reducks/carts/selectors";
 
 export default function Cart() {
     const selector = useSelector((state) => state);
@@ -18,6 +19,7 @@ export default function Cart() {
     const carts = getCarts(selector);
     const user = getUser(selector);
     const items = getItems(selector);
+    const subtotal = getSubtotal(selector);
     const checkOut = () => {
         dispatch(push("/checkout"));
     };
@@ -62,105 +64,13 @@ export default function Cart() {
                     ))}
             </ul>
 
-            {/* <div class="list-container-container">
-                <div class="list-container">
-                    <a href="/" target="_blank">
-                        <img alt="" src={Imgtest2} />
-                    </a>
-                    <div class="list-item-container">
-                        <div class="description-container">
-                            <div>Inner-Self</div>
-                            <div>Yakisoba</div>
-                            <div>Video Synthesizer</div>
-                            <div>August 28 2021</div>
-                        </div>
-                        <div class="border-container">
-                            <div class="description-bottom-border"></div>
-                        </div>
-                        <div class="price-buy-container">
-                            <div>$3800</div>
-                            <button class="add-button">Add +</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list-container-container">
-                <div class="list-container">
-                    <a href="/Users/yakisoba/repos/selfdev/static/pics/test3.png" target="_blank">
-                        <img alt="" src={Imgtest3} />
-                    </a>
-                    <div class="list-item-container">
-                        <div class="description-container">
-                            <div>Inner-Self 2</div>
-                            <div>Yakisoba</div>
-                            <div>Video Synthesizer</div>
-                            <div>August 28 2021</div>
-                        </div>
-                        <div class="border-container">
-                            <div class="description-bottom-border"></div>
-                        </div>
-                        <div class="price-buy-container">
-                            <div>$3800</div>
-                            <button class="add-button">Add +</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list-container-container">
-                <div class="list-container">
-                    <a href="/Users/yakisoba/repos/selfdev/static/pics/test2.png" target="_blank">
-                        <img alt="" src={Imgtest2} />
-                    </a>
-                    <div class="list-item-container">
-                        <div class="description-container">
-                            <div>Inner-Self</div>
-                            <div>Yakisoba</div>
-                            <div>Video Synthesizer</div>
-                            <div>August 28 2021</div>
-                        </div>
-                        <div class="border-container">
-                            <div class="description-bottom-border"></div>
-                        </div>
-                        <div class="price-buy-container">
-                            <div>$3800</div>
-                            <button class="add-button">Add +</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list-container-container">
-                <div class="list-container">
-                    <a href="/Users/yakisoba/repos/selfdev/static/pics/test3.png" target="_blank">
-                        <img alt="" src={Imgtest3} />
-                    </a>
-                    <div class="list-item-container">
-                        <div class="description-container">
-                            <div>Inner-Self 2</div>
-                            <div>Yakisoba</div>
-                            <div>Video Synthesizer</div>
-                            <div>August 28 2021</div>
-                        </div>
-                        <div class="border-container">
-                            <div class="description-bottom-border"></div>
-                        </div>
-                        <div class="price-buy-container">
-                            <div>$3800</div>
-                            <button class="add-button">Add +</button>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
             <div class="list-border-container">
                 <div class="list-container-bottom-border"></div>
             </div>
 
             <div class="subtotal-container-container">
                 <div class="subtotal-container">
-                    <div class="subtotal-item">Subtotal: $3800</div>
+                    <div class="subtotal-item">Subtotal: $ {subtotal}</div>
                     <button
                         class="subtotal-item"
                         onClick={checkOut}
