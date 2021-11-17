@@ -2,9 +2,9 @@
 # To send the request and get the result, click the 'Send Request' 
 POST http://127.0.0.1:8000/users/signin/ HTTP/1.1
 content-type: application/json
-Authorization: 12d9c15cf031e4821fa98d6b1be0f52321a3a2af00f0f812448a8041f528
+Authorization: 4617016dfb228ce964b7cd42fa19f9ce05883542df8ed67b32a9fba2f79a
 
 {
-	"email": "admin1@techis.io",
-	"password": "admin"
+	"email": "test2@gmail.com",
+	"password": "hello"
 }
