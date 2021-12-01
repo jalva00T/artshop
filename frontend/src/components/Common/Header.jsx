@@ -20,16 +20,16 @@ export default function Header() {
               <a class="sign-in title-icon navbar-brand" href="/signin">
                 Sign In
               </a>
+            </div>
+          )}
+          {localStorage.getItem("LOGIN_USER_KEY") ? (
+            <div>
               <a class="sign-in title-icon navbar-brand" href="/cart">
                 <img class="bag" alt="" src={ImgBag} />
               </a>
-            </div>
-          )}
-          <div>
-            {localStorage.getItem("LOGIN_USER_KEY") ? (
               <button onClick={logOut}>LogOut </button>
-            ) : null}
-          </div>
+            </div>
+          ) : null}
         </div>
       </header>
     </>
