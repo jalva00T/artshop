@@ -60,14 +60,14 @@ export default function Signup() {
                 </div>
             </div>
 
-            <ul class="items">
+            {/* <ul class="items">
                 {items &&
                     items.map((item) => (
                         <li>
                             <Item key={item.id} item={item} />
                         </li>
                     ))}
-            </ul>
+            </ul> */}
 
 
             {/* <div class="list-container-container">
