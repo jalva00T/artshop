@@ -4,8 +4,6 @@ import CartItem from '../components/Common/CartItem';
 import { fetchCarts } from "../reducks/carts/operations";
 import { fetchItems } from "../reducks/items/operations";
 import { getCarts } from "../reducks/carts/selectors";
-// import Imgtest2 from "../assets/img/test2.png"
-// import Imgtest3 from "../assets/img/test3.png"
 import Imgbackground from "../assets/img/main-pic.png"
 import { push } from "connected-react-router";
 import { useDispatch, useSelector } from "react-redux";

@@ -161,7 +161,7 @@ export default class API {
 
     orderAdd = async (params = {}) => {
         const order = await api
-            .post("/orders/add/", params)
+            .post("/order/add/", params)
             .then((response) => {
                 return response.data;
             })
