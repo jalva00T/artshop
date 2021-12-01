@@ -60,8 +60,17 @@ export default function Signup() {
                 </div>
             </div>
 
+            <ul class="items">
+                {items &&
+                    items.map((item) => (
+                        <li>
+                            <Item key={item.id} item={item} />
+                        </li>
+                    ))}
+            </ul>
 
-            <div class="list-container-container">
+
+            {/* <div class="list-container-container">
                 <div class="list-container">
                     <a href="/" target="_blank">
                         <img alt="" src={Imgtest2} />
@@ -162,7 +171,7 @@ export default function Signup() {
                     <div class="subtotal-item">Subtotal: $3800</div>
                     <button class="subtotal-item">Check you cart</button>
                 </div>
-            </div>
+            </div> */}
 
             {/* SIGN UP */}
 
