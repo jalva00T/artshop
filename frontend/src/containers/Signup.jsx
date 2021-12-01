@@ -4,7 +4,7 @@ import React from 'react'
 import Imgbackground from "../assets/img/main-pic.png"
 import Header from '../components/Common/Header'
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { push } from "connected-react-router";
 import { signUp } from "../reducks/user/operations";
 import Item from '../components/Common/Item';
@@ -13,6 +13,7 @@ import { getSubtotal } from "../reducks/carts/selectors";
 
 
 export default function Signup() {
+    const selector = useSelector((state) => state);
     const dispatch = useDispatch();
     const items = getItems(selector);
     const subtotal = getSubtotal(selector);
