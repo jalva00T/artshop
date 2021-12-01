@@ -4,10 +4,12 @@ import ImgBag from "../../assets/img/bag.png";
 export default function Header() {
   let user = JSON.parse(localStorage.getItem("LOGIN_USER_KEY"));
   const history = useHistory();
+
   function logOut() {
     localStorage.clear();
     history.push("/Signin");
   }
+
   return (
     <>
       <header>
@@ -27,7 +29,9 @@ export default function Header() {
               <a class="sign-in title-icon navbar-brand" href="/cart">
                 <img class="bag" alt="" src={ImgBag} />
               </a>
-              <button onClick={logOut}>LogOut </button>
+              <a class="sign-in title-icon navbar-brand" href="/signin" onClick={logOut}>
+                Logout
+              </a>
             </div>
           ) : null}
         </div>
