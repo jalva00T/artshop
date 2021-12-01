@@ -8,7 +8,7 @@ var baseURL;
 // ) {
 //     baseURL = process.env.REACT_APP_API_BASE_URL;
 // } else {
-    baseURL = "https://artshop-backend.herokuapp.com/";
+    baseURL = "https://artshop-sd-backend.herokuapp.com/";
 // }
 
 const api = axios.create({
