@@ -1,16 +1,21 @@
 import React from 'react'
-import Imgtest2 from "../assets/img/test2.png"
-import Imgtest3 from "../assets/img/test3.png"
+// import Imgtest2 from "../assets/img/test2.png"
+// import Imgtest3 from "../assets/img/test3.png"
 import Imgbackground from "../assets/img/main-pic.png"
 import Header from '../components/Common/Header'
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { push } from "connected-react-router";
 import { signUp } from "../reducks/user/operations";
+import Item from '../components/Common/Item';
+import { getItems } from "../reducks/items/selectors";
+import { getSubtotal } from "../reducks/carts/selectors";
 
 
 export default function Signup() {
     const dispatch = useDispatch();
+    const items = getItems(selector);
+    const subtotal = getSubtotal(selector);
 
     const closeButton = () => {
         dispatch(push("/"));
@@ -60,14 +65,14 @@ export default function Signup() {
                 </div>
             </div>
 
-            {/* <ul class="items">
+            <ul class="items">
                 {items &&
                     items.map((item) => (
                         <li>
                             <Item key={item.id} item={item} />
                         </li>
                     ))}
-            </ul> */}
+            </ul>
 
 
             {/* <div class="list-container-container">
@@ -160,7 +165,7 @@ export default function Signup() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div class="list-border-container">
                 <div class="list-container-bottom-border"></div>
@@ -168,10 +173,10 @@ export default function Signup() {
 
             <div class="subtotal-container-container">
                 <div class="subtotal-container">
-                    <div class="subtotal-item">Subtotal: $3800</div>
+                    <div class="subtotal-item">Subtotal: $ {subtotal}</div>
                     <button class="subtotal-item">Check you cart</button>
                 </div>
-            </div> */}
+            </div>
 
             {/* SIGN UP */}
 

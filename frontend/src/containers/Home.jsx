@@ -7,7 +7,7 @@ import { push } from "connected-react-router";
 import Item from '../components/Common/Item';
 import { fetchCarts } from "../reducks/carts/operations";
 import { getSubtotal } from "../reducks/carts/selectors";
-import Imgbackground from "../assets/img/main-pic.png"
+import Imgbackground from "../assets/img/main-pic.png";
 
 const Home = () => {
     const selector = useSelector((state) => state);
