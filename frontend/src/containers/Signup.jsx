@@ -188,7 +188,7 @@ export default function Signup() {
                         <input
                             class="sign-up-input"
                             placeholder="Email address"
-                            type="text"
+                            type="email"
                             name="email"
                             id="email"
                             onChange={inputEmail}
@@ -197,7 +197,7 @@ export default function Signup() {
                         <input
                             class="sign-up-input"
                             placeholder="Password"
-                            type="text"
+                            type="password"
                             name="password"
                             id="password"
                             onChange={inputPassword}
