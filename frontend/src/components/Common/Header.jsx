@@ -26,11 +26,11 @@ export default function Header() {
           )}
           {localStorage.getItem("LOGIN_USER_KEY") ? (
             <div>
+                <a class="sign-in title-icon navbar-brand" href="/signin" onClick={logOut}>
+                Logout
+              </a>
               <a class="sign-in title-icon navbar-brand" href="/cart">
                 <img class="bag" alt="" src={ImgBag} />
-              </a>
-              <a class="sign-in title-icon navbar-brand" href="/signin" onClick={logOut}>
-                Logout
               </a>
             </div>
           ) : null}
