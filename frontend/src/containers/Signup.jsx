@@ -1,6 +1,4 @@
 import React from 'react'
-// import Imgtest2 from "../assets/img/test2.png"
-// import Imgtest3 from "../assets/img/test3.png"
 import Imgbackground from "../assets/img/main-pic.png"
 import Header from '../components/Common/Header'
 import { useState } from "react";

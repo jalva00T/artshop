@@ -1,10 +1,8 @@
 import React from 'react';
-import Imgtest2 from "../assets/img/test2.png";
-import Imgtest3 from "../assets/img/test3.png";
 import Imgbackground from "../assets/img/main-pic.png";
 import Header from '../components/Common/Header';
 import { signIn } from "../reducks/user/operations";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { push } from "connected-react-router";
 import Item from '../components/Common/Item';
@@ -12,7 +10,10 @@ import { getItems } from "../reducks/items/selectors";
 import { getSubtotal } from "../reducks/carts/selectors";
 
 export default function Signin() {
+    const selector = useSelector((state) => state);
     const dispatch = useDispatch();
+    const items = getItems(selector);
+    const subtotal = getSubtotal(selector);
 
     const closeButton = () => {
         dispatch(push("/"));
@@ -57,7 +58,7 @@ export default function Signin() {
             </div>
 
 
-            <div class="list-container-container">
+            {/* <div class="list-container-container">
                 <div class="list-container">
                     <a href="/" target="_blank">
                         <img alt="" src={Imgtest2} />
@@ -147,7 +148,7 @@ export default function Signin() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div class="list-border-container">
                 <div class="list-container-bottom-border"></div>
@@ -155,7 +156,7 @@ export default function Signin() {
 
             <div class="subtotal-container-container">
                 <div class="subtotal-container">
-                    <div class="subtotal-item">Subtotal: $3800</div>
+                    <div class="subtotal-item">Subtotal: $ {subtotal}</div>
                     <button class="subtotal-item">Check you cart</button>
                 </div>
             </div>
