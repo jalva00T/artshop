@@ -36,6 +36,7 @@ body {
   /* background-color: forestgreen; */
 }
 
+
 /***************************************
               HOME
 ****************************************/
@@ -248,7 +249,7 @@ ul {
 
 /* FOR MEDIA DEVICE RESPONSIVENESS ON HOME PAGE */
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 450px) {
 
   body {
     min-width: max-content;
@@ -412,7 +413,7 @@ ul {
 
 /* FOR MEDIA DEVICE RESPONSIVENESS ON SIGN-IN */
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 450px) {
   .background {
     background-size: 100% 75%;
     background-attachment: fixed;
@@ -566,7 +567,7 @@ ul {
 
 /* FOR MEDIA DEVICE RESPONSIVENESS ON SIGN-UP */
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 450px) {
   .background {
     background-size: 100% 75%;
     background-attachment: fixed;
@@ -622,7 +623,7 @@ ul {
   /* background-color: yellow; */
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 450px) {
   .bg-text-phone {
     /* background-color: aqua; */
     /* width: 400px; */
@@ -855,7 +856,7 @@ ul {
 }
 
 /* FOR MEDIA DEVICE RESPONSIVENESS ON SHIPPING */
-@media screen and (max-width: 1162px) {
+@media screen and (max-width: 450px) {
   .item-1-container {
     /* background-color: aqua; */
     display: flex;
@@ -898,7 +899,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 450px) {
   .label {
     flex-wrap: nowrap;
     /* background-color: chocolate; */
@@ -973,7 +974,7 @@ ul {
 
 }
 
-@media screen and (max-width: 485px) {
+@media screen and (max-width: 450px) {
   .item-1-container {
     /* background-color: aqua; */
     display: flex;
@@ -1104,7 +1105,7 @@ ul {
 
 /* FOR MEDIA DEVICE RESPONSIVENESS ON ORDER CONFIRM */
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 450px) {
   .message-container {
     display: flex;
     align-items: center;

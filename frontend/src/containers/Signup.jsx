@@ -1,5 +1,9 @@
 import React from 'react'
 import Imgbackground from "../assets/img/main-pic.png"
+import Sd1 from "../assets/img/sd1.png";
+import Sd2 from "../assets/img/sd2.png";
+import Sd3 from "../assets/img/sd3.png";
+import Sd4 from "../assets/img/sd4.png";
 import Header from '../components/Common/Header'
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -77,7 +81,7 @@ export default function Signup() {
             {/* <div class="list-container-container">
                 <div class="list-container">
                     <a href="/" target="_blank">
-                        <img alt="" src={Imgtest2} />
+                        <img alt="" src={Sd1} />
                     </a>
                     <div class="list-item-container">
                         <div class="description-container">
@@ -100,7 +104,7 @@ export default function Signup() {
             <div class="list-container-container">
                 <div class="list-container">
                     <a href="/" >
-                        <img alt="" src={Imgtest3} />
+                        <img alt="" src={Sd2} />
                     </a>
                     <div class="list-item-container">
                         <div class="description-container">
@@ -123,7 +127,7 @@ export default function Signup() {
             <div class="list-container-container">
                 <div class="list-container">
                     <a href="/" target="_blank">
-                        <img alt="" src={Imgtest2} />
+                        <img alt="" src={Sd3} />
                     </a>
                     <div class="list-item-container">
                         <div class="description-container">
@@ -146,7 +150,7 @@ export default function Signup() {
             <div class="list-container-container">
                 <div class="list-container">
                     <a href="/" target="_blank">
-                        <img alt="" src={Imgtest3} />
+                        <img alt="" src={Sd4} />
                     </a>
                     <div class="list-item-container">
                         <div class="description-container">
