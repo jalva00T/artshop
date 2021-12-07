@@ -1,10 +1,6 @@
-import React from 'react'
-import Imgbackground from "../assets/img/main-pic.png"
-import Sd1 from "../assets/img/sd1.png";
-import Sd2 from "../assets/img/sd2.png";
-import Sd3 from "../assets/img/sd3.png";
-import Sd4 from "../assets/img/sd4.png";
-import Header from '../components/Common/Header'
+import React, { useEffect } from 'react';
+import Imgbackground from "../assets/img/main-pic.png";
+import Header from '../components/Common/Header';
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { push } from "connected-react-router";
@@ -12,6 +8,8 @@ import { signUp } from "../reducks/user/operations";
 import Item from '../components/Common/Item';
 import { getItems } from "../reducks/items/selectors";
 import { getSubtotal } from "../reducks/carts/selectors";
+import { fetchItems } from "../reducks/items/operations";
+import { fetchCarts } from "../reducks/carts/operations";
 
 
 export default function Signup() {
@@ -19,6 +17,13 @@ export default function Signup() {
     const dispatch = useDispatch();
     const items = getItems(selector);
     const subtotal = getSubtotal(selector);
+    
+    useEffect(() => {
+        dispatch(fetchItems());
+        if (localStorage.getItem("LOGIN_USER_KEY")) {
+            dispatch(fetchCarts());
+        }
+    }, []);
 
     const closeButton = () => {
         dispatch(push("/"));

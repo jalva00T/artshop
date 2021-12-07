@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Imgbackground from "../assets/img/main-pic.png";
 import Header from '../components/Common/Header';
 import { signIn } from "../reducks/user/operations";
@@ -8,12 +8,22 @@ import { push } from "connected-react-router";
 import Item from '../components/Common/Item';
 import { getItems } from "../reducks/items/selectors";
 import { getSubtotal } from "../reducks/carts/selectors";
+import { fetchItems } from "../reducks/items/operations";
+import { fetchCarts } from "../reducks/carts/operations";
+
 
 export default function Signin() {
     const selector = useSelector((state) => state);
     const dispatch = useDispatch();
     const items = getItems(selector);
     const subtotal = getSubtotal(selector);
+
+    useEffect(() => {
+        dispatch(fetchItems());
+        if (localStorage.getItem("LOGIN_USER_KEY")) {
+            dispatch(fetchCarts());
+        }
+    }, []);
 
     const closeButton = () => {
         dispatch(push("/"));
@@ -57,6 +67,14 @@ export default function Signin() {
                 </div>
             </div>
 
+            <ul class="items">
+                {items &&
+                    items.map((item) => (
+                        <li>
+                            <Item key={item.id} item={item} />
+                        </li>
+                    ))}
+            </ul>
 
             {/* <div class="list-container-container">
                 <div class="list-container">
