@@ -19,9 +19,15 @@ export default function Checkout() {
     [city, setCity] = useState(""),
     [state, setState] = useState(""),
     [totalitem, setTotalItem] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   useEffect(() => {
     dispatch(fetchCarts());
   }, []);
+
   useEffect(() => {
     let arr = [];
     if (carts != undefined && carts.length > 0) {
@@ -34,6 +40,7 @@ export default function Checkout() {
       setTotalItem(sum);
     }
   }, [carts]);
+
   const inputFullname = (e) => {
     setFullName(e.target.value);
   };
@@ -73,7 +80,7 @@ export default function Checkout() {
   };
   return (
     <>
-      <Header></Header>
+      <Header />
       <div class="message-container">
         <div class="message">- Order your items -</div>
       </div>
@@ -157,7 +164,10 @@ export default function Checkout() {
           />
           <br />
           <br />
-          <button class="submit-button" onClick={orderButton}>
+          <button
+            class="submit-button"
+            onClick={orderButton}
+            style={{ cursor: `pointer` }}>
             SUBMIT
           </button>
         </div>

@@ -23,6 +23,10 @@ export default function Cart() {
     };
 
     useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
+
+    useEffect(() => {
         if (user.token != "") {
             dispatch(fetchCarts(user.token));
             console.log("test");
