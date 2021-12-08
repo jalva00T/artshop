@@ -93,7 +93,7 @@ export default function Checkout() {
               <div class="item-1-container">
                 <div class="name">{cart.item.name}</div>
                 <div class="number">{cart.quantity}</div>
-                <div class="price">{cart.item.price}</div>
+                <div class="price">${cart.item.price}</div>
               </div>
             ))}
           <div class="border-container">
@@ -102,7 +102,7 @@ export default function Checkout() {
           <div class="total-price-container">
             <div class="price-name">Total Price</div>
             <div class="price-number">{totalitem}</div>
-            <div class="total-price">{subtotal}</div>
+            <div class="total-price">$ {subtotal}</div>
           </div>
         </div>
       </div>
