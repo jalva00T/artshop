@@ -107,6 +107,12 @@ a {
   justify-content: center;
 }
 
+.bg-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .bg-text {
   display: flex;
   flex-direction: column;
@@ -272,7 +278,6 @@ ul {
   .bg-text {
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-align-items: left;
     align-items: left;
