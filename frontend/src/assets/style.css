@@ -256,7 +256,7 @@ ul {
 
 /* FOR MEDIA DEVICE RESPONSIVENESS ON HOME PAGE */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 540px) {
 
   body {
     min-width: max-content;
@@ -618,11 +618,17 @@ ul {
          CART PHONE VIEW
 *************************************/
 
+.bg-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .bg-text-phone {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   /* padding-left: 50px; */
   font-size: 75px;
   margin-top: 100px;
@@ -631,20 +637,27 @@ ul {
 }
 
 @media screen and (max-width: 450px) {
+  .bg-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .bg-text-phone {
     /* background-color: aqua; */
     /* width: 400px; */
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     padding-left: 0;
     margin-top: 100px;
 
   }
 
   .bg-text-phone div {
-    margin-right: 115px;
+    /* margin-right: 115px; */
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -981,7 +994,7 @@ ul {
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 540px) {
   .item-1-container {
     /* background-color: aqua; */
     display: flex;

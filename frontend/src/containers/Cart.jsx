@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Common/Header'
 import CartItem from '../components/Common/CartItem';
 import { fetchCarts } from "../reducks/carts/operations";
@@ -23,8 +23,8 @@ export default function Cart() {
     };
 
     useEffect(() => {
-  window.scrollTo(0, 0)
-}, [])
+        window.scrollTo(0, 0)
+    }, [])
 
     useEffect(() => {
         if (user.token != "") {
@@ -51,8 +51,8 @@ export default function Cart() {
                 </div>
 
                 {/* <div class="bg-text-container">
-                    <div class="bg-text-phone">     
-                        <div>My Cart</div>
+                    <div class="bg-text-phone">
+                        <div>Cart</div>
                     </div>
                 </div> */}
             </div>
