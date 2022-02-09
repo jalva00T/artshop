@@ -262,6 +262,25 @@ ul {
     min-width: max-content;
   }
 
+  .background {
+    background-size: 100% 75%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 545px;
+}
+
+  .bg-text {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: left;
+    align-items: left;
+    padding-left: 50px;
+    font-size: 75px;
+    margin-top: 85px;
+    font-family: "Prata";
+  }
 
   .list-container-container {
     display: flex;
@@ -425,7 +444,7 @@ ul {
     background-size: 100% 75%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 620px;
     min-width: 500px;
   }
 
@@ -443,7 +462,7 @@ ul {
     align-items: left;
     padding-left: 0;
     font-size: 75px;
-    margin-top: 300px;
+    margin-top: 130px;
     font-family: 'Prata';
   }
 
@@ -886,13 +905,14 @@ ul {
     /* padding-right: 50px; */
     flex-wrap: wrap;
   }
-  
+
   .name {
     flex-basis: 75%;
     /* font-weight: lighter; */
     font-family: 'Raleway';
     min-width: max-content;
   }
+
   .shipment {
     /* background-color: blueviolet; */
     display: flex;
@@ -902,10 +922,12 @@ ul {
     width: 80%;
     overflow: none;
   }
+
   .price-name {
     flex-basis: 75%;
     font-weight: bold;
   }
+
   .shipment-form {
     /* background-color: red; */
     display: flex;
@@ -1004,13 +1026,14 @@ ul {
     /* padding-right: 50px; */
     flex-wrap: wrap;
   }
-  
+
   .name {
     flex-basis: 65%;
     /* font-weight: lighter; */
     font-family: 'Raleway';
     min-width: max-content;
   }
+
   .shipment {
     /* background-color: blueviolet; */
     display: flex;
@@ -1020,10 +1043,12 @@ ul {
     width: 80%;
     overflow: none;
   }
+
   .price-name {
     flex-basis: 65%;
     font-weight: bold;
   }
+
   .shipment-form {
     /* background-color: red; */
     display: flex;
