@@ -621,7 +621,7 @@ ul {
     align-items: left;
     padding-left: 0;
     font-size: 75px;
-    margin-top: 300px;
+    /* margin-top: 300px; */
     font-family: 'Prata';
   }
 
