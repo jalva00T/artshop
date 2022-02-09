@@ -110,7 +110,7 @@ a {
 .bg-text-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .bg-text {
